@@ -1,0 +1,24 @@
+/*设置折线图的样式*/
+
+.web_component canvas{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.web_component .web_polytext{
+	position: absolute;
+	text-align: center;
+	bottom:-20px;
+	height: 20px;line-height: 20px;
+	-webkit-transform: scale(.8);
+	-webkit-transition: all 1s 0.5s;
+	opacity: 0;
+}
+.web_component_polyline_leave .web_polytext{
+	opacity: 0;
+}
+.web_component_polyline_load .web_polytext{
+	opacity: 1;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,mininum-scale=1,maxinum-scale=1">
+	<title>测试web组件开发</title>
+	<script type="text/javascript" src="js/lib/jquery.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.fullPage.js"></script>
+
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		.section{color: #fff;}
+		.silde{display: none;}
+	</style>
+</head>
+<body>
+	<div id="fullpage">
+		<div class="section" id="page_1">
+			<div class="silde">第一屏</div>
+		</div>
+		<div class="section" id="page_2">
+			<div class="silde">第二屏</div>
+		</div>
+		<div class="section" id="page_3">
+			<div class="silde">第三屏的第一屏</div>
+			<div class="silde">第三屏的第二屏</div>
+			<div class="silde">第三屏的第三屏</div>
+		</div>
+		<div class="section" id="page_4">
+			<div class="silde">第四屏</div>
+		</div>
+	</div>
+</body>
+	<script type="text/javascript">
+		$(function(){
+			$('#fullpage').fullpage({
+				'sectionsColor':['#ccc','#333','#bbb','#aaa'],
+				onLeave:function(index,nextindex,direction){
+					$('#fullpage').find('.section').eq(index-1).trigger('onLeave');
+				},
+				afterLoad:function(anchorLink,index){
+					$('#fullpage').find('.section').eq(index-1).trigger('onLoad');
+				},
+			});
+
+			$('.section').on('onLeave',function(){
+				console.log($(this).attr('id'),'==>','onLeave' );
+				$(this).find('.silde').trigger('onLeave');
+			})
+
+			$('.section').on('onLoad',function(){
+				console.log($(this).attr('id'),'==>','onLoad');
+				$(this).find('.silde').trigger('onLoad');
+			})
+
+			$('.silde').on('onLeave',function(){
+				$(this).fadeOut();
+				return false;
+			})
+
+			$('.silde').on('onLoad',function(){
+				$(this).fadeIn();
+				return false;
+			})
+		})
+		
+
+
+	</script>
+</html>
