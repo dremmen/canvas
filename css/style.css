@@ -1,0 +1,98 @@
+/* 初始化浏览器 */
+body, html{
+	font: 24px/1 "microsoft yahei";
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	-ms-perspective: 1000px;
+	perspective: 1000px;
+}
+img {
+	border: none;
+}
+
+#main {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -150px;
+	margin-top: -250px;
+	width: 300px;
+	height: 500px;
+	background-color: #fff;
+	-webkit-transform: rotateX(45deg);
+	-ms-transform: rotateX(45deg);
+	-o-transform: rotateX(45deg);
+	transform: rotateX(45deg);
+}
+
+.preserve-3d{
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;	
+}
+
+.page {
+	-webkit-transform-origin: 0 50%;
+	-moz-transform-origin: 0 50%;
+	-ms-transform-origin: 0 50%;
+	-o-transform-origin: 0 50%;
+	transform-origin: 0 50%;
+	-webkit-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+}
+
+.img-page {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 300px;
+	height: 500px;
+}
+.img-page p{background-color: #fff;}
+.animation-1,.animation-2,.animation-3,.animation-4,.animation-5,.animation-6,.animation-7
+{
+	transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+}
+.animation-1{position: absolute;z-index: 99;}
+.animation-2{position: absolute;z-index: 98;}
+.animation-3{position: absolute;z-index: 97;}
+.animation-4{position: absolute;z-index: 96;}
+.animation-5{position: absolute;z-index: 95;}
+.animation-6{position: absolute;z-index: 94;}
+.animation-7{position: absolute;z-index: 93;}
+.animation-8{position: absolute;z-index: 92;}
+.show.animation-1,.show.animation-2,.show.animation-3,.show.animation-4,.show.animation-5,.show.animation-6,.show.animation-7,.show.animation-8
+{
+	transition: all 3s linear 0s;
+	-webkit-transition: all 3s linear 0s;
+	-ms-transition: all 3s linear 0s;
+	-o-transition: all 3s linear 0s;
+	transform: rotateY(-160deg);
+	-webkit-transform: rotateY(-160deg);
+	-ms-transform: rotateY(-160deg);
+	-o-transform: rotateY(-160deg);
+
+}
+.hide.animation-1,.hide.animation-2,.hide.animation-3,.hide.animation-4,.hide.animation-5,.hide.animation-6,.hide.animation-7,.hide.animation-8
+{
+	transition: all 3s linear 0s;
+	-webkit-transition: all 3s linear 0s;
+	-ms-transition: all 3s linear 0s;
+	-o-transition: all 3s linear 0s;
+	transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+
+}
+.btn{position: absolute;width: 100%;text-align: center;bottom: 100px;}
+.btn span{padding: 5px 10px;margin-right: 10px;background-color: #ededed;color: red;cursor: pointer;border-radius: 4px;}
