@@ -62,14 +62,14 @@ img {
 	-ms-transform: rotateY(0deg);
 	-o-transform: rotateY(0deg);
 }
-.animation-1{position: absolute;z-index: 99;}
-.animation-2{position: absolute;z-index: 98;}
-.animation-3{position: absolute;z-index: 97;}
-.animation-4{position: absolute;z-index: 96;}
-.animation-5{position: absolute;z-index: 95;}
-.animation-6{position: absolute;z-index: 94;}
-.animation-7{position: absolute;z-index: 93;}
-.animation-8{position: absolute;z-index: 92;}
+.animation-1,.hide.animation-8{position: absolute;z-index: 99;}
+.animation-2,.hide.animation-7{position: absolute;z-index: 98;}
+.animation-3,.hide.animation-6{position: absolute;z-index: 97;}
+.animation-4,.hide.animation-5{position: absolute;z-index: 96;}
+.animation-5,.hide.animation-4{position: absolute;z-index: 95;}
+.animation-6,.hide.animation-3{position: absolute;z-index: 94;}
+.animation-7,.hide.animation-2{position: absolute;z-index: 93;}
+.animation-8,.hide.animation-1{position: absolute;z-index: 92;}
 .show.animation-1,.show.animation-2,.show.animation-3,.show.animation-4,.show.animation-5,.show.animation-6,.show.animation-7,.show.animation-8
 {
 	transition: all 3s linear 0s;
