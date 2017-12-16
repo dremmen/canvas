@@ -17,12 +17,12 @@ $(function(){
 		})
 
 		prev.click(function(){
-			page.eq(index).removeClass('show').addClass('hide');
 			index--;
 			if(index<0){
 				index = 0;
 				page.removeClass('show').addClass('hide');
 			}
+			page.eq(index).removeClass('show').addClass('hide');
 			console.log(index);
 		})
 
