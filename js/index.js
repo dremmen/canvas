@@ -9,7 +9,6 @@ $(function(){
 		
 		next.click(function(){
 			page.eq(index).removeClass('hide').addClass('show');
-			page.eq(index).css('z-index',index+1);
 			index++;
 
 			if(index>pL){
@@ -25,7 +24,6 @@ $(function(){
 				page.removeClass('show').addClass('hide');
 			}
 			page.eq(index).removeClass('show').addClass('hide');
-			page.eq(index).css('z-index',index+1);
 			console.log(index);
 		})
 
